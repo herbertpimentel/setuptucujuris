@@ -1,0 +1,21 @@
+<extends src="template.html">
+  <block name="conteudo">
+    <h1>Page 1</h1>
+
+    <div data-bind="text: contador"></div>
+
+    <button data-bind="click: increment">+</button>
+    <button data-bind="click: createPessoa">Create Pessoa</button>
+    <button data-bind="click: fetchFromApi">fetch from api</button>
+
+    <editcomponente
+      params="{pessoa : ko.getObservable(obj, 'pessoa')}"
+    ></editcomponente>
+
+    <!-- ko if : obj && obj.pessoa -->
+    <div data-bind="text: obj.pessoa.nome"></div>
+    <!-- /ko -->
+
+    <script src="./page1.js"></script>
+  </block>
+</extends>

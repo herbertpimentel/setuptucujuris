@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "posthtml-extend": {
+        encoding: 'utf8',
+        root: './src'
+    }
+  }
+}
